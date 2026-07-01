@@ -19,7 +19,6 @@ body{
 margin:0;
 width:100vw;
 height:100vh;
-min-height:100vh;
 min-height:100dvh;
 
 display:flex;
@@ -27,7 +26,12 @@ justify-content:center;
 align-items:center;
 
 font-family:Arial;
+
+/* FIX MINI APP STABILITY */
+position:fixed;
+inset:0;
 overflow:hidden;
+overscroll-behavior:none;
 
 background: radial-gradient(circle at top, #1f2a37, #0b1220);
 color:#fff;
@@ -83,6 +87,12 @@ border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 20px 60px rgba(0,0,0,0.5);
 
 text-align:center;
+}
+
+/* FIX MINI APP CENTERING STABILITY */
+.app{
+max-height: calc(100dvh - 100px);
+overflow:auto;
 }
 
 .title{
